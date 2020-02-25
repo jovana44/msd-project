@@ -1,0 +1,96 @@
+/* CAROUSEL NAVIGATION
+   ========================================================================== */
+
+.owl-prev,
+.owl-next {
+    position: absolute;
+    top: 60%;
+    margin-top: -32px;
+    @include size(20px, 53px);
+    @include respond-to('sm') {
+        @include scale(0.6);
+    }
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        @include size(20px, 4px);
+        background: #dcdcdb;
+        @include transition(all 200ms ease-in-out);
+    }
+    &:hover {
+        &:before,
+        &:after {
+            background: #b6b6b4;
+        }
+    }
+}
+
+.owl-prev {
+    left: 0px;
+    @include respond-to('lg-large') {
+        left: -4px;
+    }
+    @include respond-to('md') {
+        top: auto;
+        left: auto;
+        right: 70px;
+        bottom: 0;
+    }
+    @include respond-to('sm') {
+        right: 50px;
+    }
+    &:before {
+        @include rotate(-50deg);
+        top: 14px;
+        left: 0;
+    }
+    &:after {
+        @include rotate(50deg);
+        top: 27px;
+        left: 0;
+    }
+    &:hover {
+        &:before {
+            @include rotate(-40deg);
+        }
+        &:after {
+            @include rotate(40deg);
+            top: 25px;
+        }
+    }
+}
+
+.owl-next {
+    right: 00px;
+    @include respond-to('lg-large') {
+        right: -4px;
+    }
+    @include respond-to('md') {
+        top: auto;
+        right: 0;
+        bottom: 0;
+    }
+    @include respond-to('sm') {
+        right: 10px;
+    }
+    &:before {
+        @include rotate(50deg);
+        top: 14px;
+        right: 0;
+    }
+    &:after {
+        @include rotate(-50deg);
+        top: 28px;
+        right: 0;
+    }
+    &:hover {
+        &:before {
+            @include rotate(40deg);
+        }
+        &:after {
+            @include rotate(-40deg);
+            top: 25px;
+        }
+    }
+}

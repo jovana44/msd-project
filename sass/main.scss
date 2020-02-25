@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'nowbold';
+    src: url('../fonts/now-bold.woff2') format('woff2'), url('../fonts/now-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nowmedium';
+    src: url('../fonts/now-medium.woff2') format('woff2'), url('../fonts/now-medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nowregular';
+    src: url('../fonts/now-regular.woff2') format('woff2'), url('../fonts/now-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// VENDOR
+@import "compass/css3";
+@import "compass/css3/animation";
+// @import "vendor/_bootstrap-sprockets.scss";
+// @import "vendor/_bootstrap-variables.scss";
+// @import "vendor/_bootstrap-compass.scss";
+// @import "vendor/_bootstrap-mincer.scss";
+// @import "vendor/_bootstrap-datepicker.scss";
+
+/* BOOTSTRAP FRAMEWORK
+   ========================================================================== */
+
+@import "bootstrap/bootstrap.scss";
+// Core variables and mixins
+//@import "bootstrap/variables";
+//@import "bootstrap/mixins";
+// Reset and dependencies
+//@import "bootstrap/normalize";
+//@import "bootstrap/print";
+//@import "bootstrap/glyphicons";
+// Core CSS
+//@import "bootstrap/scaffolding";
+//@import "bootstrap/type";
+//@import "bootstrap/code";
+//@import "bootstrap/grid";
+// @import "bootstrap/tables";
+//@import "bootstrap/forms";
+// @import "bootstrap/buttons";
+// Components
+// @import "bootstrap/component-animations";
+// @import "bootstrap/dropdowns";
+// @import "bootstrap/button-groups";
+// @import "bootstrap/input-groups";
+// @import "bootstrap/navs";
+// @import "bootstrap/navbar";
+// @import "bootstrap/breadcrumbs";
+// @import "bootstrap/pagination";
+//@import "bootstrap/pager";
+//@import "bootstrap/labels";
+//@import "bootstrap/badges";
+//@import "bootstrap/jumbotron";
+//@import "bootstrap/thumbnails";
+// @import "bootstrap/alerts";
+//@import "bootstrap/progress-bars";
+//@import "bootstrap/media";
+//@import "bootstrap/list-group";
+//@import "bootstrap/panels";
+//@import "bootstrap/responsive-embed";
+//@import "bootstrap/wells";
+//@import "bootstrap/close";
+// Components w/ JavaScript
+// @import "bootstrap/modals";
+//@import "bootstrap/tooltip";
+// @import "bootstrap/popovers";
+// @import "bootstrap/carousel";
+// Utility classes
+//@import "bootstrap/utilities";
+//@import "bootstrap/responsive-utilities";
+
+/* ==========================================================================
+   BOOTSTRAP FRAMEWORK ENDED */
+
+
+/* ===============================================
+   OWL CAROUSEL */
+
+@import "react/vendor/owl-carousel/owl.carousel.scss";
+
+/* OWL CAROUSEL ENDED ============================= */
+
+
+/* ANIMATIONS WOW ============================*/
+
+// @import 'react/vendor/animate';
+
+/* ANIMATIONS ENDED===========================*/
+
+// NEW REACT.JS STYLES
+// =================================================
+// BASE
+@import "react/base/animations";
+@import "react/base/_config";
+@import "react/base/_base";
+@import "react/base/buttons";
+// ELEMENTS
+@import "react/elements/caption";
+@import "react/elements/shapes";
+@import "react/elements/title";
+@import "react/elements/services-item";
+@import "react/elements/blogs-item";
+@import "react/elements/head";
+@import "react/elements/read-more";
+@import "react/elements/subscribe";
+@import "react/elements/carousel-nav";
+@import "react/elements/services-shapes";
+// LAYOUT
+@import "react/layout/header";
+@import "react/layout/footer";
+@import "react/layout/contact-form";
+// PAGES ===============================================
+// HOME PAGE
+@import "react/home-page/home";
+@import "react/home-page/services-section";
+@import "react/home-page/cases-section";
+@import "react/home-page/testimonials-section";
+@import "react/home-page/blogs-section";
+//ABOUT PAGE
+@import "react/pages/about";
+//SERVICES PAGE
+@import "react/pages/services";
+//SERVICES-DETAIL PAGE
+@import "react/pages/services-detail";
+//CASES PAGE
+@import "react/pages/cases";
+//INSIGHTS PAGE
+@import "react/pages/insights";
+//CLIENTS PAGE
+@import "react/pages/clients";

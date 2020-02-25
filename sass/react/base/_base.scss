@@ -1,0 +1,222 @@
+/* BASE STYLES
+   ========================================================================== */
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.hide {
+    display: none;
+}
+
+.svg-sprite-hide {
+    @include opacity(0);
+    // @include square(0);
+    position: absolute;
+}
+
+.svg {
+    display: block;
+    svg {
+        //  @include square(100%);
+    }
+}
+
+ul {
+    li {
+        font-size: 12px;
+        color: $color-base-gray;
+    }
+}
+
+a {
+    &:focus,
+    &:hover {
+        text-decoration: none;
+        outline: none;
+    }
+}
+
+.link {
+    color: $color-primary;
+    @include transition(color 200ms ease-in-out, fill 200ms ease-in-out);
+    background: none;
+    font-size: 12px;
+    .isvg {
+        @include transition(fill 200ms ease-in-out);
+        fill: $color-primary;
+        //  @include square(14px);
+    }
+    &:hover,
+    &:focus {
+        color: $color-secondary;
+        .isvg {
+            fill: $color-secondary;
+        }
+    }
+    &--icon {
+        .isvg {
+            display: inline-block;
+            vertical-align: text-bottom;
+            margin-right: 6px;
+        }
+    }
+}
+
+button {
+    padding: 0;
+    border: none;
+    &:active,
+    &:focus {
+        outline: none !important;
+    }
+}
+
+select {
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn {
+    padding: 0;
+    margin: 0;
+    border: none;
+    &:active,
+    &:focus,
+    &:hover {
+        border: none;
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+blockquote {
+    margin: 0;
+}
+
+.form-control {
+    height: 30px;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 0 0 8px 0;
+    text-align: left;
+    @include box-shadow(none);
+    @include transition(all 200ms ease-in-out);
+    //  @include placeholder(#A7A7AC);
+    max-width: 100%;
+    border-radius: 0;
+    &:focus,
+    &.focus {
+        outline: none;
+        border-color: $color-secondary;
+        box-shadow: none;
+    }
+}
+
+textarea.form-control {
+    padding: 7px 11px;
+    resize: none;
+}
+
+body input:-webkit-autofill,
+body input:-webkit-autofill:hover,
+body input:-webkit-autofill:focus input:-webkit-autofill,
+body textarea:-webkit-autofill,
+body textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+body select:-webkit-autofill,
+body select:-webkit-autofill:hover,
+body select:-webkit-autofill:focus {
+    @include transition(all 200ms ease-in-out);
+    -webkit-text-fill-color: #4F4F59;
+}
+
+// Error Form Style
+.error {
+    .control-label {
+        color: #c92100;
+    }
+    .form-control {
+        border: 1px solid #c92100;
+    }
+}
+
+.btn-default:active,
+.btn-default:focus,
+.btn-default:hover {
+    background-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+    margin: 0 0 10px;
+}
+
+// jovana
+h1,
+h2,
+h3 {
+    font-family: 'nowbold';
+    color: $color-secondary;
+}
+
+h1 {
+    font-size: 52px;
+    line-height: 70px;
+    letter-spacing: -0.53px;
+    color: $color-primary;
+}
+
+h2 {
+    font-size: 42px;
+    letter-spacing: -0.79px;
+    line-height: 60px;
+}
+
+h3 {
+    font-size: 26px;
+    letter-spacing: -0.49px;
+    line-height: 50px;
+}
+
+h4 {
+    font-family: 'nowmedium';
+    color: $color-third;
+    font-size: 24px;
+    letter-spacing: -0.45px;
+    line-height: 30px;
+}
+
+h5,
+p {
+    color: $color-secondary;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: -0.3px;
+    margin: 0 0 10px;
+}
+
+button {
+    font-family: 'nowbold';
+    font-size: 16px;
+    letter-spacing: -0.3px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: $color-secondary;
+}
+
+.wow {
+    // visibility: hidden;
+    opacity: 0;
+}

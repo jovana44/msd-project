@@ -1,0 +1,24 @@
+// SERVICES-DETAIL PAGE -----------------------------
+//----------------------------------------------------
+.services-detail {
+    padding-top: 50px;
+    .head {
+        margin-bottom: 70px;
+        h1 {
+            max-width: 515px;
+        }
+    }
+    &__text-section {
+        margin-bottom: 52px;
+    }
+    &__text-img {
+        max-width: 100%;
+        margin-bottom: 50px;
+    }
+    &__bottom {
+        margin-top: 50px;
+        height: 600px;
+        background-repeat: no-repeat;
+        background-position: top 200px right -580px;
+    }
+}

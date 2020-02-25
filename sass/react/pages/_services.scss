@@ -1,0 +1,68 @@
+.services-page {
+    position: relative;
+    overflow: hidden;
+    padding: 70px 0px;
+    .services-items__wrap {
+        margin: 50px auto 0px auto;
+        @include respond-to('md') {
+            margin: 30px auto 0px auto;
+        }
+        [class^="col"] {
+            padding: 0;
+        }
+    }
+    .head {
+        @include respond-to('md-small') {
+            padding-bottom: 0;
+        }
+    }
+    .services-item {
+        height: 556px;
+        @include respond-to('md-small') {
+            height: 420px;
+        }
+        @include respond-to('sm') {
+            height: 200px;
+        }
+        &__content {
+            max-width: 280px;
+            @include respond-to('sm') {
+                max-width: 100px;
+            }
+            &-up {
+                margin-bottom: 20px;
+                @include respond-to('sm') {
+                    margin-bottom: 5px;
+                }
+            }
+            h3 {
+                @include respond-to('sm') {
+                    font-size: 9px;
+                    line-height: 10px;
+                }
+            }
+            p {
+                @include respond-to('sm') {
+                    font-size: 5px;
+                    line-height: 8px;
+                }
+            }
+            img {
+                max-width: 60px;
+                @include respond-to('sm') {
+                    max-width: 35px;
+                }
+            }
+        }
+        .button {
+            width: 242px;
+            padding: 13px 0;
+            @include respond-to('sm') {
+                font-size: 6px;
+                line-height: 8px;
+                width: 100px;
+                padding: 6px 0;
+            }
+        }
+    }
+}

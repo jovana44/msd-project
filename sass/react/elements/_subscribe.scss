@@ -1,0 +1,104 @@
+.subscribe {
+    max-width: 850px;
+    margin: 60px auto;
+    box-shadow: 0 10px 17px rgba(160, 158, 157, 0.35);
+    border-radius: 40px;
+    text-align: center;
+    padding: 45px;
+    h3 {
+        font-size: 20px;
+        letter-spacing: -0.37px;
+        margin-bottom: 28px;
+    }
+    form {
+        @include transition(all 400ms ease-in-out);
+        input {
+            display: inline-block;
+            outline: 0;
+            border-radius: 40px;
+            background-color: $color-light;
+            // padding: 8px 187px 8px 20px;
+            margin-right: -187px;
+            font-family: 'Nunito', sans-serif;
+            color: $color-primary;
+            font-size: 16px;
+            text-transform: lowercase;
+            font-weight: 600;
+            line-height: 19px;
+            border: 1px solid #3c2881;
+            // min-width: 425px;
+            -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+            -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+            -o-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+            @include transition(all 400ms ease-in-out);
+            &.show {
+                min-width: 425px;
+                padding: 8px 187px 8px 20px;
+            }
+        }
+        .button {
+            display: inline-block;
+            width: 187px;
+            margin: 0 auto;
+            border: 2px solid $color-primary;
+            @include transition(all 400ms ease-in-out);
+        }
+    }
+    .form {
+        margin-top: 20px;
+        height: 49px;
+        @include transition(all 400ms ease-in-out);
+        input {
+            visibility: hidden;
+            height: 100%;
+            display: inline-block;
+            width: 0;
+            outline: 0;
+            border-radius: 40px;
+            background-color: $color-light;
+            margin-right: -187px;
+            color: $color-primary;
+            font-size: 16px;
+            text-transform: lowercase;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 600;
+            line-height: 19px;
+            border: 1px solid #3c2881;
+            -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+            -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+            -o-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+            @include transition(all 400ms ease-in-out);
+            &.show {
+                min-width: 425px;
+                padding: 8px 187px 8px 20px;
+                visibility: visible;
+            }
+        }
+        .button {
+            display: inline-block;
+            width: 187px;
+            height: 100%;
+            margin: 0 auto;
+            border: 2px solid $color-primary;
+            @include transition(all 400ms ease-in-out);
+        }
+    }
+}
+
+.done {
+    display: none;
+}
+
+.email-input {
+    display: none;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}

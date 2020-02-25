@@ -1,0 +1,144 @@
+/* CLIENTS
+   ========================================================================== */
+
+.clients {
+    .head {
+        h2 {
+            max-width: 500px;
+        }
+    }
+    &__testimonials {
+        .owl-item {
+            padding-top: 114px;
+        }
+        .owl-prev {
+            left: 0;
+            @include respond-to('lg') {
+                left: -15px;
+            }
+            @include respond-to('md') {
+                left: auto;
+                right: 70px;
+            }
+            @include respond-to('sm') {
+                left: auto;
+                right: 50px;
+            }
+        }
+        .owl-next {
+            right: 0;
+            @include respond-to('lg') {
+                right: -15px;
+            }
+            @include respond-to('md') {
+                right: 0;
+            }
+        }
+    }
+    &__testimonials-item {
+        background: #3c2881;
+        height: 790px;
+        @include border-radius(40px);
+        padding: 45px 95px;
+        position: relative;
+        max-width: 853px;
+        margin: 0 auto 70px;
+        @include respond-to('md') {
+            padding: 45px 40px;
+        }
+        @include respond-to('sm') {
+            padding: 45px 20px;
+        }
+    }
+    &__testimonials-image {
+        max-width: 238px;
+        @include border-radius(50%);
+        margin: -159px auto 30px;
+        @include respond-to('sm') {
+            max-width: 178px;
+            margin: -130px auto 30px;
+        }
+    }
+    &__testimonials-title {
+        font-size: 19px;
+        font-weight: 700;
+        text-align: center;
+        color: #fff;
+        letter-spacing: -0.36px;
+        line-height: 23px;
+        margin-bottom: 25px;
+        span {
+            display: block;
+        }
+    }
+    &__testimonials-text {
+        font-size: 16px;
+        letter-spacing: -0.3px;
+        line-height: 30px;
+        color: #fff;
+    }
+    &__testimonials-logo {
+        text-align: center;
+        a {
+            display: inline-block;
+        }
+        img {
+            max-width: 166px;
+        }
+    }
+    &__testimonials-quote {
+        font-size: 60px;
+        font-weight: 700;
+        letter-spacing: -1.12px;
+        line-height: 1;
+        display: block;
+        height: 22px;
+        &--start {
+            margin-bottom: 16px;
+        }
+        &--end {
+            text-align: right;
+            margin-bottom: -8px;
+        }
+    }
+    // --------------------------------------------------------------------- Logos
+    &__logos {
+        background-repeat: no-repeat;
+        background-position: 70% 0;
+        padding: 165px 0 50px;
+        .head {
+            padding-bottom: 100px;
+            h2,
+            p {
+                color: $color-light;
+            }
+        }
+        .title {
+            h4 {
+                color: $color-light;
+            }
+            &__line {
+                border-color: $color-light;
+            }
+        }
+    }
+    &__logos-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    &__logos-wrapper {
+        @include display-flex();
+        margin-bottom: 120px;
+        @include respond-to('sm') {
+            margin-bottom: 70px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+        a,
+        img {
+            margin: auto;
+        }
+    }
+}

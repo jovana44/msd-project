@@ -1,0 +1,72 @@
+/* SERVICES SECTION - HOME PAGE
+   ========================================================================== */
+
+.services {
+    padding: 70px 0px;
+    position: relative;
+    @include respond-to('md-small') {
+        padding: 30px 0 0 0;
+    }
+    .title {
+        @include respond-to('md-small') {
+            padding-left: 36px;
+            padding-right: 36px;
+        }
+    }
+    &-title {
+        margin-top: 40px;
+        margin-bottom: 25px;
+        @include respond-to('md-small') {
+            padding-left: 36px;
+            padding-right: 36px;
+            font-size: 31px;
+            line-height: 42px;
+        }
+    }
+    &-item {
+        height: 425px;
+        @include respond-to('md-small') {}
+        &__content {
+            @include respond-to('sm') {
+                max-width: 150px;
+            }
+            h3 {
+                @include respond-to('sm') {
+                    font-size: 14px;
+                    line-height: 16px;
+                }
+            }
+            img {
+                @include respond-to('sm') {
+                    max-width: 35px;
+                    margin-right: 20px;
+                }
+            }
+            p {
+                @include respond-to('sm') {
+                    line-height: 14px;
+                    margin-bottom: 7px;
+                }
+            }
+            .button {
+                @include respond-to('sm') {
+                    font-size: 10px;
+                    width: 100px;
+                    min-width: 100px;
+                    padding: 4px 0;
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+    .shape-blue {
+        top: 260px;
+        left: -630px;
+        right: auto;
+    }
+    .shape-white {
+        top: -290px;
+        right: -540px;
+        left: auto;
+    }
+}

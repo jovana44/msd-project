@@ -1,0 +1,22 @@
+.head {
+    padding-bottom: 50px;
+    h1,
+    h2 {
+        @include respond-to('md-small') {
+            font-size: 31px;
+            line-height: 42px;
+        }
+    }
+    p {
+        margin-bottom: 20px;
+        @include respond-to('md-small') {
+            margin-bottom: 10px;
+            font-size: 14px;
+            line-height: 28px;
+            letter-spacing: -0.26px;
+        }
+    }
+    .read-more {
+        margin-top: 50px;
+    }
+}

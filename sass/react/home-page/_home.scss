@@ -1,0 +1,137 @@
+.wrapper {
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    >.shape-white {
+        top: -180px;
+        left: -600px;
+        @include respond-to('lg-large') {
+            top: -50px;
+            left: -360px;
+        }
+    }
+    >.shape-blue {
+        top: -250px;
+        right: -650px;
+        @include respond-to('lg-large') {
+            top: 1280px;
+            right: -445px;
+        }
+    }
+    >.shape-services {
+        width: 649px;
+        height: 615px;
+        top: -111px;
+        left: -520px;
+        right: auto;
+        @include respond-to('md-small') {
+            width: 250px;
+            height: 220px;
+            top: -4px;
+            left: -213px;
+        }
+    }
+}
+
+.intro {
+    padding: 50px 0 100px 0;
+    width: 100%;
+    position: relative;
+    @include respond-to('md-small') {
+        padding: 50px 0;
+    }
+    .container {
+        @include respond-to('md-small') {
+            padding-left: 51px;
+            padding-right: 51px;
+        }
+    }
+    .title {
+        &::after {
+            @include respond-to('sm') {
+                max-width: 200px;
+            }
+        }
+    }
+    h1 {
+        margin: 0;
+        margin-top: 50px;
+        @include respond-to('md-small') {
+            font-size: 31px;
+            line-height: 42px;
+        }
+    }
+    &-img {
+        width: 1060px;
+        height: 562px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        @include respond-to('md-small') {
+            width: 691px;
+            height: 322px;
+        }
+        // img {
+        //     width: 100%;
+        //     height: 100%;
+        //     object-fit: contain;
+        //     object-position: left;
+        //     filter: drop-shadow(0 15px 43px rgba(0, 0, 0, 0.13));
+        // }
+        // &::after {
+        //     content: '';
+        //     background-image: url('../img/Mask.png');
+        //     background-repeat: no-repeat;
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     bottom: 0;
+        //     right: 0;
+        //     background-size: contain;
+        //     // background-color: #4b3988;
+        //     // opacity: 0.67;
+        // }
+    }
+    &-content {
+        max-width: 950px;
+        margin: auto;
+        @include respond-to('lg') {
+            margin-top: 20px;
+        }
+        &__text {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+        h2 {
+            margin-bottom: 15px;
+            @include respond-to('md-small') {
+                font-size: 24px;
+                line-height: 32.95px;
+                margin-bottom: 10px;
+            }
+        }
+        p {
+            margin-bottom: 30px;
+            @include respond-to('md-small') {
+                margin-bottom: 0px;
+            }
+        }
+        .read-more {
+            margin: 40px 0 80px 0;
+            justify-content: flex-end;
+            @include respond-to('md-small') {
+                margin: 20px 0 80px 0;
+                justify-content: flex-start;
+            }
+        }
+    }
+    .shape-blue {
+        top: 1570px;
+        left: -174px;
+    }
+    .shape-white {
+        top: 1650px;
+        left: auto;
+        right: -200px;
+    }
+}

@@ -1,0 +1,21 @@
+.shape-white {
+    width: 789px;
+    height: 800px;
+}
+
+.shape-blue {
+    width: 789px;
+    height: 625px;
+}
+
+.shape-white,
+.shape-blue {
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    z-index: -1;
+    @include respond-to('md-small') {
+        width: 487px;
+        height: 494px;
+    }
+}

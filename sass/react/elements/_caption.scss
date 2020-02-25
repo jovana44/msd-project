@@ -1,0 +1,25 @@
+.caption {
+    margin: 0 auto;
+    border-radius: 7px;
+    background-color: $color-secondary;
+    -moz-box-shadow: 0 15px 25px rgba(160, 158, 157, 0.35);
+    -webkit-box-shadow: 0 15px 25px rgba(160, 158, 157, 0.35);
+    -o-box-shadow: 0 15px 25px rgba(160, 158, 157, 0.35);
+    box-shadow: 0 15px 25px rgba(160, 158, 157, 0.35);
+    padding: 25px 20px;
+    text-align: center;
+    @include respond-to('md-small') {
+        border-radius: 0;
+        margin-left: -51px;
+        margin-right: -51px;
+        padding: 40px 20px;
+    }
+    h3 {
+        color: #ffffff;
+        margin: 0;
+        @include respond-to('md-small') {
+            font-size: 20px;
+            line-height: 36px;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.services-page {
+    &__shape1 {
+        width: 867px;
+        height: 893px;
+        top: 400px;
+        right: -700px;
+        @include respond-to('md') {
+            display: none;
+        }
+    }
+    &__shape2 {
+        width: 1006px;
+        height: 993px;
+        top: 700px;
+        left: -750px;
+        right: auto;
+        @include respond-to('md') {
+            display: none;
+        }
+    }
+    &__shape3 {
+        width: 974px;
+        height: 923px;
+        bottom: -670px;
+        right: -430px;
+        left: auto;
+        @include respond-to('md') {
+            display: none;
+        }
+    }
+}

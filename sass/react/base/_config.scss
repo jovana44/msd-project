@@ -1,0 +1,381 @@
+// VARIABLES
+// ==========================================================================
+// COLOR VARIABLES
+$color-light: #fff;
+$color-black: #000;
+$color-primary: #3c2581;
+$color-secondary: #3c2881;
+$color-third: #3c1f85;
+$color-primary-lighter: #8578b1;
+$color-base-dark: #23232F;
+$color-base-gray: #a6a6a6;
+$color-gray-light: #d8d8d8;
+$color-positive: #fdc649;
+$color-positive-dark: #e2b400;
+$color-positive-secondary: #ffce53;
+$color-base-light: #9e9cb5;
+$color-base: #b9c2ca;
+// RESPONSIVE
+$breakpoints: ( 'lg-large': (max-width: 1440px), 'lg-medium': (max-width: 1320px), 'lg': (max-width: 1200px), 'md-large': (max-width: 1024px), 'md': (max-width: 992px), 'md-small':(max-width: 768px), 'md-x-small': (max-width: 600px), 'sm': (max-width: 480px), 'x-sm': (max-width: 350px), 'min-sm-height': (min-height: 1024px), 'min-sm': (min-width: 769px), 'min-sm-large': (min-width: 850px), 'min-md': (min-width: 992px), 'min-md-large': (min-width: 1024px), 'min-md-large-portrait': (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait), 'min-md-large-landscape': (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape), 'ipad-pro-portrait': (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait), 'ipad-pro-landscape': (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape), // @media screen and (max-width: 1024px) , screen and (max-height: 768px)
+'min-lg-small': (min-width: 1170px), 'min-lg': (min-width: 1200px), 'min-lg-medium-small': (min-width: 1300px), 'min-lg-medium': (min-width: 1320px), 'min-lg-large': (min-width: 1440px));
+@mixin respond-to($breakpoint) {
+    $raw-query: map-get($breakpoints, $breakpoint);
+    @if $raw-query {
+        $query: if(type-of($raw-query)=='string', unquote($raw-query), inspect($raw-query));
+        @media #{$query} {
+            @content;
+        }
+    }
+    @else {
+        @error 'No value found for `#{$breakpoint}`. '+'Please make sure it is defined in `$breakpoints` map.';
+    }
+}
+
+// MIXINS
+@mixin createButton($background-color, $text-color, $border-color) {
+    @extend %btn;
+    background: $background-color;
+    color: $text-color;
+    border: 1px solid $border-color;
+    &:active,
+    &:focus,
+    &:hover {
+        background: $background-color;
+        color: $text-color;
+        outline: none;
+    }
+}
+
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    @include translateY(-50%);
+}
+
+@mixin flex-center {
+    @include display-flex();
+    @include align-items(center);
+    @include justify-content(center);
+}
+
+@mixin flex-center-vertical {
+    @include display-flex();
+    @include align-items(center);
+}
+
+@mixin separator {
+    content: '';
+    position: absolute;
+    @include size(1px, 100%);
+    background: #ccc;
+    top: 0;
+}
+
+@mixin background-cover {
+    @include background-size(cover);
+    background-position: center;
+}
+
+@mixin scrollbar-style {
+    &::-webkit-scrollbar-track {
+        background-color: #fff;
+    }
+    &::-webkit-scrollbar {
+        width: 5px;
+        background-color: #fff;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba(35, 35, 47, 0.7);
+        @include border-radius(15px);
+    }
+}
+
+// PLACEHOLDERS
+%btn {
+    @include border-radius(4px);
+    position: relative;
+    border: none;
+    outline: none;
+    height: 30px;
+    line-height: 30px;
+    font: {
+        size: 12px;
+        weight: 500;
+    }
+    margin: 0;
+    padding: 0 13.5px;
+    @include transition(all 100ms ease-in-out);
+}
+
+// BUTTONS
+.btn-default.active.focus,
+.btn-default.active:focus,
+.btn-default.active:hover,
+.btn-default:active.focus,
+.btn-default:active:focus,
+.btn-default:active:hover,
+.open>.btn-default.dropdown-toggle.focus,
+.open>.btn-default.dropdown-toggle:focus,
+.open>.btn-default.dropdown-toggle:hover {
+    color: inherit;
+    background-color: transparent;
+    border: none;
+}
+
+.btn-default.active,
+.btn-default:active,
+.open>.btn-default.dropdown-toggle {
+    color: inherit;
+    background-color: transparent;
+    border: none;
+}
+
+.btn-group.open .dropdown-toggle {
+    box-shadow: none;
+}
+
+.btn {
+    background: none;
+    .isvg {
+        @include transition(fill 100ms ease-in-out);
+    }
+    &.btn {
+        &-primary {
+            @include createButton($color-primary, $color-light, $color-primary);
+            .isvg {
+                fill: $color-light;
+            }
+            &:hover {
+                background: $color-secondary;
+                border: 1px solid $color-secondary;
+            }
+            &:focus,
+            &:active:focus,
+            &:focus:active {
+                // background: $color-primary-light;
+                border: 1px solid $color-primary;
+            }
+        }
+        &-green {
+            @include createButton($color-secondary, $color-light, $color-secondary);
+            .isvg {
+                fill: $color-light;
+            }
+            &:hover {
+                background: $color-secondary;
+                border: 1px solid $color-secondary;
+            }
+            &:focus,
+            &:active:focus,
+            &:focus:active {
+                background: $color-secondary;
+                border: 1px solid $color-secondary;
+            }
+        }
+        &-secondary {
+            @include createButton($color-light, $color-primary, $color-primary);
+            .isvg {
+                fill: $color-primary;
+            }
+            &:hover {
+                background: $color-primary;
+                color: $color-light;
+                border: 1px solid $color-primary;
+                .isvg {
+                    fill: $color-light;
+                }
+            }
+            &:focus {
+                .isvg {
+                    fill: $color-light;
+                }
+            }
+            &:focus,
+            &:active:focus,
+            &:focus:active {
+                background: #85B1C2;
+                border: 1px solid $color-primary;
+                color: $color-light;
+            }
+        }
+        &-blue-gray {
+            @include createButton(rgba($color-primary, 0.1), $color-primary, rgba($color-primary, 0.1));
+            .isvg {
+                fill: $color-primary;
+            }
+            &:hover {
+                background: $color-light;
+                border: 1px solid $color-light;
+            }
+            &:focus,
+            &:active:focus,
+            &:focus:active {
+                // background: $color-primary-light;
+                border: 1px solid $color-primary;
+            }
+        }
+        &-gray {
+            @include createButton(#d3d3d5, $color-light, #d3d3d5);
+            &:hover {
+                background: #d3d3d5;
+                border: 1px solid #d3d3d5;
+            }
+            &:focus,
+            &:active:focus,
+            &:focus:active {
+                border: 1px solid #d3d3d5;
+            }
+        }
+        &-red {
+            @include createButton(rgba(255, 0, 0, 1), $color-light, rgba(255, 0, 0, 1));
+            .isvg {
+                fill: $color-light;
+            }
+            &:hover {
+                background: rgba(255, 0, 0, 1);
+                border: 1px solid rgba(255, 0, 0, 1);
+            }
+            &:focus,
+            &:active:focus,
+            &:focus:active {
+                border: 1px solid rgba(255, 0, 0, 1);
+            }
+        }
+        &-transparent {
+            // @include createButton(none, $color-blue, none);
+            &:after {
+                background-color: none;
+            }
+        }
+        &-fluid {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            background: transparent;
+            &:active,
+            &:focus,
+            &:hover {
+                outline: 0;
+                box-shadow: none !important;
+            }
+        }
+        &-small {
+            height: 25px;
+            line-height: 25px;
+        }
+        &-large {
+            height: 36px;
+            line-height: 36px;
+            text-transform: uppercase;
+            @include border-radius(5px);
+        }
+        &-xs {
+            height: 25px;
+            line-height: 25px;
+            padding: 0 13.5px;
+        }
+        &-icon {
+            padding-left: 36px;
+            .isvg {
+                position: absolute;
+                left: 10px;
+                top: 50%;
+                @include translateY(-50%);
+                //   @include square(14px);
+            }
+        }
+        &-icon-right {
+            padding-right: 40px;
+            .isvg {
+                fill: $color-light;
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                @include translateY(-50%);
+                // @include square(12px);
+            }
+        }
+        &.disabled {
+            @include createButton(#d3d3d5, $color-light, #d3d3d5);
+        }
+        .caret {
+            margin: -1px 0 0 16px;
+            border-top: 6px solid;
+            border-right: 6px solid transparent;
+            border-left: 6px solid transparent;
+        }
+        &-caret {
+            .caret {
+                margin: -1px 0 0;
+            }
+        }
+    }
+}
+
+.open>.btn-primary.dropdown-toggle,
+.open>.btn-primary.dropdown-toggle:hover,
+.open>.btn-primary.dropdown-toggle:focus {
+    // background: $color-primary-light;
+    border: 1px solid $color-primary;
+    color: $color-light;
+}
+
+.open>.btn-secondary.dropdown-toggle,
+.open>.btn-secondary.dropdown-toggle:hover,
+.open>.btn-secondary.dropdown-toggle:focus {
+    background: #85B1C2;
+    border: 1px solid $color-primary;
+    color: $color-light;
+}
+
+.sidebar-load-bar {
+    position: absolute;
+    // @include size(100%, 4px);
+    background-color: #fff;
+    top: 0%;
+}
+
+.sidebar-load-bar--small {
+    height: 3px;
+}
+
+.sidebar-bar {
+    content: "";
+    display: inline;
+    position: absolute;
+    //@include size(0, 100%);
+    left: 50%;
+    text-align: center
+}
+
+.sidebar-bar:nth-child(1) {
+    background-color: $color-primary;
+    @include animation(sidebar-loading 3s linear infinite);
+}
+
+.sidebar-bar:nth-child(2) {
+    background-color: #d8dee3;
+    @include animation(sidebar-loading 3s linear 1s infinite);
+}
+
+.sidebar-bar:nth-child(3) {
+    background-color: $color-primary;
+    @include animation(sidebar-loading 3s linear 2s infinite);
+}
+
+@include keyframes(sidebar-loading) {
+    from {
+        left: 50%;
+        width: 0;
+        z-index: 100;
+    }
+    33.3333% {
+        left: 0;
+        width: 100%;
+        z-index: 10;
+    }
+    to {
+        left: 0;
+        width: 100%;
+    }
+}

@@ -1,0 +1,147 @@
+.fadeInLeft {
+    @include animation(fadeInLeft);
+    @include animation-fill-mode(forwards);
+}
+
+@include keyframes(fadeInLeft) {
+    0% {
+        @include transform(translateX(-20px));
+        @include opacity(0);
+    }
+    100% {
+        @include transform(translateX(0));
+        @include opacity(1);
+    }
+}
+
+.rotateInDownLeft {
+    @include animation(rotateInDownLeft);
+    @include animation-fill-mode(forwards);
+}
+
+@include keyframes(rotateInDownLeft) {
+    0% {
+        @include transform-origin(left bottom);
+        @include transform(rotate(-90deg));
+        @include opacity(0);
+    }
+    100% {
+        @include transform-origin(left bottom);
+        @include transform(rotate(0));
+        @include opacity(1);
+    }
+}
+
+.rotateInDownRight {
+    @include animation(rotateInDownRight);
+    @include animation-fill-mode(forwards);
+}
+
+@include keyframes(rotateInDownRight) {
+    0% {
+        @include transform-origin(right bottom);
+        @include transform(rotate(90deg));
+        @include opacity(0);
+    }
+    100% {
+        @include transform-origin(right bottom);
+        @include transform(rotate(0));
+        @include opacity(1);
+    }
+}
+
+.fadeIn {
+    @include animation(fadeIn);
+    @include animation-fill-mode(forwards);
+}
+
+@include keyframes(fadeIn) {
+    0% {
+        @include opacity(0);
+    }
+    100% {
+        @include opacity(1);
+    }
+}
+
+.fadeInDown {
+    @include animation(fadeInDown);
+    @include animation-fill-mode(forwards);
+}
+
+@include keyframes(fadeInDown) {
+    0% {
+        @include transform(translateY(-15px));
+        @include opacity(0);
+    }
+    100% {
+        @include transform(translateY(0));
+        @include opacity(1);
+    }
+}
+
+.fadeInLeft {
+    @include animation(fadeInLeft);
+    @include animation-fill-mode(forwards);
+}
+
+@include keyframes(fadeInLeft) {
+    0% {
+        @include transform(translateX(-20px));
+        @include opacity(0);
+    }
+    100% {
+        @include transform(translateX(0));
+        @include opacity(1);
+    }
+}
+
+.fadeInRight {
+    @include animation(fadeInRight);
+    @include animation-fill-mode(forwards);
+}
+
+@include keyframes(fadeInRight) {
+    0% {
+        @include transform(translateX(20px));
+        @include opacity(0);
+    }
+    100% {
+        @include transform(translateX(0));
+        @include opacity(1);
+    }
+}
+
+.fadeInUp {
+    @include animation(fadeInUp);
+    @include animation-fill-mode(forwards);
+}
+
+@include keyframes(fadeInUp) {
+    0% {
+        @include transform(translateY(15px));
+        @include opacity(0);
+    }
+    100% {
+        @include transform(translateY(0));
+        @include opacity(1);
+    }
+}
+
+.lineLeft {
+    @include animation(lineLeft);
+    @include animation-fill-mode(forwards);
+}
+
+@include keyframes(lineLeft) {
+    0% {
+        @include transform-origin(100% 50%);
+        @include scaleX(0);
+        @include opacity(0);
+    }
+    100% {
+        @include transform-origin(0% 50%);
+        @include scaleX(1);
+        @include opacity(1);
+    }
+}
